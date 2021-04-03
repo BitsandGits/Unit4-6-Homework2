@@ -1,31 +1,52 @@
 //Homework Part One
 
-//Using what you did with Objects perdiod 2 from the slides, create a personal profile. Instead of Products you will need to create a personal profile. Initialize Constructors and More!
+//Using what you did with Objects period 2 from the slides, create a personal profile. Instead of Products you will need to create a personal profile. Initialize Constructors and More!
 //Step 1
-
-
-
+function Person(name, age, gender, race, home, event){
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.race = race;
+    this.home = home;
+    this.event = event;
+};
+console.log("Person framework via constructor: \n", Person);
 
 //Step 2
-
-
-
+let joy = new Person("Joy", 25, "Female", "Human", "Earth");
+console.log(joy);
 
 //Step 3
-
-
+// let frodo = new Person("Frodo", 51, "Male", "Hobbit", "The Shire");
+// let aragorn = new Person("Aragorn", 88, "Male","Human","Gondor");
+// let arwen = new Person("Arwen", 2700, "Female","Elf","Rivendell");
+// let legolas = new Person("Legolas", 2930, "Male", "Elf", "Woodland");
+// let gandalf = new Person("Gandalf", 11000, "Male", "Maia", "Middle Earth");
 
 //Step 4
+function Quest(weapon, destination){
+    this.weapon = weapon;
+    this.destination = destination;
+}
+let quest1 = new Quest("Sting", "Mount Doom");
+let quest2 = new Quest("Anduril", "Mordor");
+let quest3 = new Quest("Hadhafang", "Undying Land");
+let quest4 = new Quest("Galadhrim Bow", "Elephants");
+let quest5 = new Quest("Glamdring Staff", "Tower");
 
-
-//Step 5
-
+//Step 5: added event parameter to Person 
 
 //Step 6
-
+let frodo = new Person("Frodo", 51, "Male", "Hobbit", "The Shire", quest1);
+let aragorn = new Person("Aragorn", 88, "Male","Human","Gondor", quest2);
+let arwen = new Person("Arwen", 2700, "Female","Elf","Rivendell", quest3);
+let legolas = new Person("Legolas", 2930, "Male", "Elf", "Woodland", quest4);
+let gandalf = new Person("Gandalf", 11000, "Male", "Maia", "Middle Earth", quest5);
+console.log("LOTR characters: ", frodo, aragorn, arwen, legolas, gandalf);
 
 // Step 7
-
+arwen.changeQuest = true;
+console.log("Added an Arwen property: ", arwen);
 
 // Step 8
 
